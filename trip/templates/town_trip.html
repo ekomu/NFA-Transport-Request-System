@@ -1,0 +1,10 @@
+<h1>Town Trip</h1>
+
+<h2>{{note}}</h2>
+
+<form action="{% url 'town_trip' %}" method="POST">
+  {% csrf_token %}
+  {{town_form.as_p}}
+
+    <input type="submit" value="Submit Request">
+  </form>
